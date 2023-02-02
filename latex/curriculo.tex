@@ -1,0 +1,63 @@
+% #-#-#-#-# Configurações #-#-#-#-#
+
+% 'a4paper' é o tamanho padrão, caso seja internacional, usar 'letterpaper'
+\documentclass[12pt, a4paper]{latex/admin/awesome-cv}
+
+\linespread{1.5}
+
+\input{latex/dados_empresariais/LinkedIn/LinkedIn}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+% #-#-#-#-# Informações Pessoais #-#-#-#-#
+
+% dados pessoais
+\input{latex/dados_pessoais}
+
+
+% #-#-#-#-# Início do LaTeX #-#-#-#-#
+\begin{document}
+
+    % alinhamento das informações pessoais
+    \makecvheader[C] % C: center, L: left, R: right
+
+    % configurando o rodapé com 3 argumentos (esquerda, centro, direita)
+    \makecvfooter
+        % esquerda
+        {\today}
+        % centro
+        {Curriculum Vitae}
+        % direita
+        {\thepage}
+
+    % sobre
+    \input{latex/secoes/sobre.tex}
+
+    % experiência
+    \input{latex/secoes/experiencias.tex}
+
+    % formação acadêmica
+    \input{latex/secoes/formacoes_academicas.tex}
+
+    % voluntariado
+    \input{latex/secoes/experiencia_de_voluntariado.tex}
+
+\end{document}
